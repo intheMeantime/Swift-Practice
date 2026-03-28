@@ -9,19 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            // subview
-            DayForcsat(day: "Mon", weather: "sunny", hight:70, low:50)
-//                .padding(.horizontal, 5)
-            
-            DayForcsat(day:"Tue", weather: "rainy", hight:60, low:40)
-//                .padding(.horizontal, 5)
-            
-            DayForcsat()
-//                .padding(.horizontal, 5)
-
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                
+                // subview
+                DayForcsat(day: "Mon", weather: "sunny", hight:70, low:50)
+                    .padding(.horizontal, 10)
+                
+                DayForcsat(day:"Tue", weather: "rainy", hight:60, low:40)
+                    .padding(.horizontal, 10)
+                
+                DayForcsat()
+                    .padding(.horizontal, 10)
+                DayForcsat()
+                    .padding(.horizontal, 10)
+                DayForcsat()
+                    .padding(.horizontal, 10)
+                DayForcsat()
+                    .padding(.horizontal, 10)
+                DayForcsat()
+                    .padding(.horizontal, 10)
+                
+            }
+            .padding()
         }
-        .padding()
     }
 }
 

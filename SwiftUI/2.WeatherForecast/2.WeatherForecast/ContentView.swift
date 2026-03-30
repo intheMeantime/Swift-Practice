@@ -13,21 +13,21 @@ struct ContentView: View {
             HStack {
                 
                 // subview
-                DayForcsat(day: "Mon", weather: "sunny", hight:70, low:50)
+                DayForcast(day: "Mon", weather: "sunny", hight:70, low:50)
                     .padding(.horizontal, 10)
                 
-                DayForcsat(day:"Tue", weather: "rainy", hight:60, low:40)
+                DayForcast(day:"Tue", weather: "rainy", hight:60, low:40)
                     .padding(.horizontal, 10)
                 
-                DayForcsat()
+                DayForcast()
                     .padding(.horizontal, 10)
-                DayForcsat()
+                DayForcast()
                     .padding(.horizontal, 10)
-                DayForcsat()
+                DayForcast()
                     .padding(.horizontal, 10)
-                DayForcsat()
+                DayForcast()
                     .padding(.horizontal, 10)
-                DayForcsat()
+                DayForcast()
                     .padding(.horizontal, 10)
                 
             }
@@ -40,7 +40,7 @@ struct ContentView: View {
 
 
 // 새로운 subview용 스트럭트 생성 (계속 쓸 틀을 생성)
-struct DayForcsat: View {
+struct DayForcast: View {
     var day : String = "Dream"
     var weather: String = "Dream"
     var hight: Int = -10
@@ -68,9 +68,6 @@ struct DayForcsat: View {
         }
         else {return Color.orange}
     }
-    //
-    
-    
     // 여기부터 ㄹㅇ 섭뷰!!!
     var body: some View {
         VStack {

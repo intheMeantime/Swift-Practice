@@ -5,15 +5,18 @@
 
 - $바인딩 사용한 부분: `TextField` `Toggle`
 ``` Swift
-TextField("Add Album", text: $nameToAdd) .onSubmit{ 액션클로저 - 사용자가 Return 키를 눌렀을 때 실행할 명령형 코드를 클로저로 작성}
+TextField("Add Album", text: $nameToAdd)
+    .onSubmit{ 액션클로저 - 사용자가 Return 키를 눌렀을 때 실행할 명령형 코드 }
 Toggle("Remove when picked", isOn: $shouldRemovePickedName)
 ```
 
-- 배열에서 랜던값 반환하기
+
+- 배열에서 랜덤값 반환하기
     ```Swift
      if let randomAlbum = names.randomElement() {...}
      ```
-    - 배열이 비어있으면 .randomElement()는 mil 을 반환하기 때문에, if let 으로 nil일 경우를 처리
+    - 배열이 비어있으면 `.randomElement()`는 nil 을 반환하기 때문에, if let 으로 nil일 경우를 처리
+
 
 
 - `removeAll { 조건 }` : 조건을 만족하는 모든 요소를 삭제
@@ -22,6 +25,7 @@ names.removeAll { name in
     return (name == randomAlbum)
 }
 ```
+
 
 - 버튼 만들기
 ``` Swift

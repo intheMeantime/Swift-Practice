@@ -73,7 +73,7 @@ struct ContentView: View {
             
             
             Button { // 액션 클로저
-                // 배열이 비어있으면 randomElement()는 mil 을 반환하기 때문에
+                // 배열이 비어있으면 randomElement()는 nil 을 반환하기 때문에
                 // if let 으로 nil일 경우를 처리
                 if let randomAlbum = names.randomElement() {
                     pickedName = randomAlbum

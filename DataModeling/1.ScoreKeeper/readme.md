@@ -29,6 +29,8 @@ ForEach($players) { $player in
 
 ## [Data Modeling] 1-2. Custom types and Swift Testing: Add functionality with Swift Testing
 
+<https://developer.apple.com/tutorials/develop-in-swift/add-functionality-with-swift-testing>
+
 - 테스트해보는 방법 ...
     - 테스트 파일을 만들어서 밖에서 테스트를 함
     - `@testable import ScoreKeeper`

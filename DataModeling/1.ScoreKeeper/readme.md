@@ -27,6 +27,23 @@ ForEach($players) { $player in
         GridRow {
 ```
 
-## Preview
+## [Data Modeling] 1-2. Custom types and Swift Testing: Add functionality with Swift Testing
 
+- 테스트해보는 방법 ...
+    - 테스트 파일을 만들어서 밖에서 테스트를 함
+    - @testable import ScoreKeeper
+    모듈 이름은 문자로 시작해야 한다.. (프로젝트-TARGETS-Build Settings-Product Module Name-이름 변경)
+
+- Picker
+    - 사용자가 항목을 선택하면 picker의 $바인딩이 해당 tag 값으로 업데이트됨!!!
+
+- `mutating`
+    - // 해당 struct의 property(속성)를 변경할 수 있는 메서드(func)에는 mutating 키워드를 붙여야 함!!!
+```Swift
+mutating func resetScore(to newValue: Int) 
+```
+
+
+## Preview
+![preview](img/preview.png)
 

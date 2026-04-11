@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F86ED1672F84FB7F0006E566 /* readmee.md in Resources */ = {isa = PBXBuildFile; fileRef = F86ED1662F84FB7F0006E566 /* readmee.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F821EF9D2F6D7AB90067C4D2 /* 01.Explore_Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 01.Explore_Xcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F86ED1662F84FB7F0006E566 /* readmee.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readmee.md; sourceTree = "<group>"; };
 		F8CDC0A02F6DB9DB00423E5D /* 01.Explore_Xcode.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = 01.Explore_Xcode.xcodeproj; path = 01.ExploreXcode/01.Explore_Xcode.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -33,6 +38,7 @@
 		F821EF942F6D7AB90067C4D2 = {
 			isa = PBXGroup;
 			children = (
+				F86ED1662F84FB7F0006E566 /* readmee.md */,
 				F821EF9F2F6D7AB90067C4D2 /* ExploreXcode */,
 				F821EF9E2F6D7AB90067C4D2 /* Products */,
 			);
@@ -123,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86ED1672F84FB7F0006E566 /* readmee.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,3 +17,11 @@ struct Player: Identifiable { // 여기서 Identifiable 같은 애들은 Protoco
     var score: Int
     
 }
+
+// 어떤 타입이 Equatable을 준수한다고 선언하면, Swift는 자동으로 해당 타입의 모든 프로퍼티를 비교하여 같으면 true를 반환하는 구현을 제공
+// 만약 두 플레이어가 같은 인스턴스인지 확인하고 싶다면, id property(속성)를 직접 비교
+extension Player: Equatable {
+    static func == (lhs: Player, rhs: Player) -> Bool {
+        lhs.name == rhs.name && lhs.score == rhs.score
+    }
+}

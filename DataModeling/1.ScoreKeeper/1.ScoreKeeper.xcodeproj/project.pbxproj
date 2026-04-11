@@ -6,8 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F87F12FF2F83D75F009000E3 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = F87F12FE2F83D75F009000E3 /* readme.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8F038812F87F26B0003318A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F87F12DD2F83C225009000E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F87F12E42F83C225009000E3;
+			remoteInfo = 1.ScoreKeeper;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		F87F12E52F83C225009000E3 /* 1.ScoreKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1.ScoreKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F87F12FE2F83D75F009000E3 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		F8F0387D2F87F26B0003318A /* 1.ScoreKeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 1.ScoreKeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +32,22 @@
 			path = 1.ScoreKeeper;
 			sourceTree = "<group>";
 		};
+		F8F0387E2F87F26B0003318A /* 1.ScoreKeeperTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = 1.ScoreKeeperTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F87F12E22F83C225009000E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F0387A2F87F26B0003318A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				F87F12E72F83C225009000E3 /* 1.ScoreKeeper */,
+				F8F0387E2F87F26B0003318A /* 1.ScoreKeeperTests */,
 				F87F12E62F83C225009000E3 /* Products */,
+				F87F12FE2F83D75F009000E3 /* readme.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				F87F12E52F83C225009000E3 /* 1.ScoreKeeper.app */,
+				F8F0387D2F87F26B0003318A /* 1.ScoreKeeperTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +101,29 @@
 			productReference = F87F12E52F83C225009000E3 /* 1.ScoreKeeper.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F8F0387C2F87F26B0003318A /* 1.ScoreKeeperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8F038832F87F26B0003318A /* Build configuration list for PBXNativeTarget "1.ScoreKeeperTests" */;
+			buildPhases = (
+				F8F038792F87F26B0003318A /* Sources */,
+				F8F0387A2F87F26B0003318A /* Frameworks */,
+				F8F0387B2F87F26B0003318A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8F038822F87F26B0003318A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F8F0387E2F87F26B0003318A /* 1.ScoreKeeperTests */,
+			);
+			name = 1.ScoreKeeperTests;
+			packageProductDependencies = (
+			);
+			productName = 1.ScoreKeeperTests;
+			productReference = F8F0387D2F87F26B0003318A /* 1.ScoreKeeperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +136,10 @@
 				TargetAttributes = {
 					F87F12E42F83C225009000E3 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					F8F0387C2F87F26B0003318A = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = F87F12E42F83C225009000E3;
 					};
 				};
 			};
@@ -100,12 +158,21 @@
 			projectRoot = "";
 			targets = (
 				F87F12E42F83C225009000E3 /* 1.ScoreKeeper */,
+				F8F0387C2F87F26B0003318A /* 1.ScoreKeeperTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F87F12E32F83C225009000E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F87F12FF2F83D75F009000E3 /* readme.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F0387B2F87F26B0003318A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +189,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8F038792F87F26B0003318A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8F038822F87F26B0003318A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F87F12E42F83C225009000E3 /* 1.ScoreKeeper */;
+			targetProxy = F8F038812F87F26B0003318A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F87F12EE2F83C226009000E3 /* Debug */ = {
@@ -264,6 +346,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nooy.--ScoreKeeper";
+				PRODUCT_MODULE_NAME = ScoreKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -295,6 +378,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "nooy.--ScoreKeeper";
+				PRODUCT_MODULE_NAME = ScoreKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -303,6 +387,46 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F8F038842F87F26B0003318A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nooy.--ScoreKeeperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1.ScoreKeeper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/1.ScoreKeeper";
+			};
+			name = Debug;
+		};
+		F8F038852F87F26B0003318A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "nooy.--ScoreKeeperTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/1.ScoreKeeper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/1.ScoreKeeper";
 			};
 			name = Release;
 		};
@@ -323,6 +447,15 @@
 			buildConfigurations = (
 				F87F12F12F83C226009000E3 /* Debug */,
 				F87F12F22F83C226009000E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8F038832F87F26B0003318A /* Build configuration list for PBXNativeTarget "1.ScoreKeeperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8F038842F87F26B0003318A /* Debug */,
+				F8F038852F87F26B0003318A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

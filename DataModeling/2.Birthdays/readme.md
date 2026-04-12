@@ -26,27 +26,28 @@
 
 
 - `DatePicker`
+    - newDate에 받아오겟다, 과거부터 지금만 선택가능, 시간은 빼고 날짜만 띄우겠다
 ```Swift
 DatePicker(selection: $newDate, in: Date.distantPast...Date.now, displayedComponents: .date){
 ...}
 ```
-    - newDate에 받아오겟다, 과거부터 지금만 선택가능, 시간은 빼고 날짜만 띄우겠다
+
 
 
 ```Swift
 @Query(sort: \Friend.birthday) private var friends: [Friend]
 ```
-    - friends 배열의 어노테이션을 @Query로 하여 SwiftData에 저장된 Friend 인스턴스를 가져옴
-    - 이름에서 알 수 있듯이, @Query는 SwiftData에 데이터 배열을 요청 — 이 경우 [Friend]. SwiftData에 저장된 Friend 인스턴스를 업데이트하면, @State 프로퍼티처럼 해당 쿼리가 뷰를 자동으로 업데이트함.
-    - birthday 기준으로 sorting함!
-    
+- friends 배열의 어노테이션을 @Query로 하여 SwiftData에 저장된 Friend 인스턴스를 가져옴
+- 이름에서 알 수 있듯이, @Query는 SwiftData에 데이터 배열을 요청 — 이 경우 [Friend]. SwiftData에 저장된 Friend 인스턴스를 업데이트하면, @State 프로퍼티처럼 해당 쿼리가 뷰를 자동으로 업데이트함.
+- birthday 기준으로 sorting함!
+
     
 ```Swift
 @Environment(\.modelContext) private var context
 ```
-    - ModelContext는 뷰와 모델 컨테이너 사이의 연결을 제공하여,
-    - 컨테이너 안의 데이터를 가져오고(fetch), 추가(insert)하고, 삭제(delete)할 수 있게 해줌.
-    - ContentView에 추가한 .modelContainer 수정자는 SwiftUI 환경에 modelContext를 주입하며, 이 modelContext는 해당 컨테이너 아래의 모든 뷰에서 접근할 수 있음
+- ModelContext는 뷰와 모델 컨테이너 사이의 연결을 제공하여,
+- 컨테이너 안의 데이터를 가져오고(fetch), 추가(insert)하고, 삭제(delete)할 수 있게 해줌.
+- ContentView에 추가한 .modelContainer 수정자는 SwiftUI 환경에 modelContext를 주입하며, 이 modelContext는 해당 컨테이너 아래의 모든 뷰에서 접근할 수 있음
 
 
 

@@ -14,7 +14,7 @@
     ```
 
 
-## [Data Modeling] 3-1. Navigation, editing, and relationships: Create, update, and delete data
+## [Data Modeling] 3-2. Navigation, editing, and relationships: Create, update, and delete data
 
 <https://developer.apple.com/tutorials/develop-in-swift/create-update-and-delete-data>
 
@@ -24,29 +24,35 @@
                 
 
 - 툴바 만들기
-    - 정보를 추가(action: addfriend)할 수도 있고, 삭제(EditButton())할 수도 있음 .. 
+    - 정보를 추가(`action: addFriend`)할 수도 있고, 삭제(`EditButton()`)할 수도 있음 .. 
                 
-```Swift
-            // 추가
-            .toolbar {
-                // 툴바 누르면 -> 만들어둔 함수를 action 시켜서 -> 친구추가 되도록
-                ToolbarItem{
-                    Button("친구추가", systemImage: "plus", action: addFriend)
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    EditButton()
-                }
+    ```Swift
+        // 추가
+        .toolbar {
+            // 툴바 누르면 -> 만들어둔 함수를 action 시켜서 -> 친구추가 되도록
+            ToolbarItem{
+                Button("친구추가", systemImage: "plus", action: addFriend)
             }
-            // 옵셔널 프로퍼티(newFriend)에 값이 있을 때! (addFriend가 호출되면)
-            // 시트를 표시하도록 트리거함....!!!
-            .sheet(item: $newFriend) {friend in
-                NavigationStack {
-                    FriendDetail(friend: friend, isNew: true)
-                }
-                .interactiveDismissDisabled() // 아래로 끌어서 닫는 거 막기
+            ToolbarItem(placement: .topBarTrailing) {
+                EditButton()
             }
+        }
+        // 옵셔널 프로퍼티(newFriend)에 값이 있을 때! (addFriend가 호출되면)
+        // 시트를 표시하도록 트리거함....!!!
+        .sheet(item: $newFriend) {friend in
+            NavigationStack {
+                FriendDetail(friend: friend, isNew: true)
+            }
+            .interactiveDismissDisabled() // 아래로 끌어서 닫는 거 막기
+        }
+    ```
             
+- 하나의 기본 화면을 만들어두고, 필요(상태-친구전체, 친구추가)에 따라서 기능 몇 개 넣고(e.g.,툴바) 재활용을 한다 ,,
+    - 어떤 상태인지 파라미터로 구분을 함 (e.g., isNew: Bool)
+
             
-```        
+  
 ## Preview 
 ![preview](img/preview.png)
+
+

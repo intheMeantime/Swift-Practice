@@ -21,6 +21,15 @@ class SampleData {
         modelContainer.mainContext
     }
     
+    var friend: Friend {
+        Friend.sampleData.first!
+    }
+    var movie: Movie {
+        Movie.sampleData.first!
+    }
+    
+    
+    
     // 초기화 메서드를 private으로 선언
     // 초기화 메서드를 private으로 지정하면 SampleData의 인스턴스는 오직 SampleData 클래스 내부에서만 생성될 수 있음!!!!
     // 전역에서 공유되는 객체를 생성할 때 흔히 사용되는 패턴

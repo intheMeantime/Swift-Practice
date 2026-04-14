@@ -18,7 +18,9 @@ struct ContentView: View {
 
 
             Tab("Movies", systemImage: "popcorn") {
-                MovieList()
+                // MovieList()
+                FilteredMovieList()
+                // 어차피 쿼리가 없으면 모두 뜨기 때문에 Filtered로 보여줌
             }
         }
     }

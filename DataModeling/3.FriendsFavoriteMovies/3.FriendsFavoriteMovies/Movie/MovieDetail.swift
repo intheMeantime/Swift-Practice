@@ -21,12 +21,29 @@ struct MovieDetail: View {
         self.isNew = isNew
     }
     
+    // 순서 고정하기 위해..
+    var sortedFriends: [Friend] {
+        movie.favoriteBy.sorted { first, second in
+            first.name < second.name
+            
+        }
+    }
+    
     
     var body: some View {
         Form{
             TextField("Movie title", text: $movie.title)
             
             DatePicker("Release date", selection: $movie.releaseDate)
+            
+            if !movie.favoriteBy.isEmpty {
+                Section("이 영화를 조아하는 친구들") {
+                    ForEach(sortedFriends) { friend in
+                        Text(friend.name)
+                    }
+                }
+            }
+            
         }
         .navigationTitle(isNew ? "새 영화" : "Movie")
         .navigationBarTitleDisplayMode(.inline)

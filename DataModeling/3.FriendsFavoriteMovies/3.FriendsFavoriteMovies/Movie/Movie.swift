@@ -12,6 +12,7 @@ import SwiftData
 class Movie {
     var title: String
     var releaseDate: Date
+    var favoriteBy = [Friend]() // 여러 친구들이 들어올 수 있도록
     
     init(title: String, releaseDate: Date) {
         self.title = title

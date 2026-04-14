@@ -18,16 +18,23 @@ struct FriendList: View {
     var body: some View {
         NavigationSplitView {
             // NavigationSplitView를 사이드바와 디테일 영역으로 구성! 사이드바에는 보통 항목들의 리스트가 포함되며, 각 항목을 선택하면 해당 항목에 대응하는 하위 뷰가 디테일 영역에 표시됨
-            List {
-                ForEach(friends) { friend in
-//                    Text(friend.name)
-                    NavigationLink(friend.name) {
-                        // Text("Detail view for >>\(friend.name)<<")
-                        FriendDetail(friend: friend)
-                        
+            Group { // 아무것도 변경하지 않고 단지 그룹지어주는 컨테이너! (모디파이어 적용을 위한 느낌)
+                if !friends.isEmpty {
+                    List {
+                        ForEach(friends) { friend in
+                            //                    Text(friend.name)
+                            NavigationLink(friend.name) {
+                                // Text("Detail view for >>\(friend.name)<<")
+                                FriendDetail(friend: friend)
+                                
+                            }
+                        }
+                        .onDelete(perform: deleteFriends(indexes:))
                     }
+                } else {
+                    // 뷰의 콘텐츠를 표시할 수 없는 상황에서 사용하는 스트럭트
+                    ContentUnavailableView("Add Friends", systemImage: "person.and.person")
                 }
-                .onDelete(perform: deleteFriends(indexes:))
             }
             //        .task {
             //            context.insert(Friend(name: "nooy"))
@@ -85,4 +92,9 @@ struct FriendList: View {
     FriendList()
 //        .modelContainer(for: Friend.self, inMemory: true)
         .modelContainer(SampleData.shared.modelContainer)
+}
+
+#Preview("Empty List") {
+    FriendList()
+        .modelContainer(for: Friend.self, inMemory: true)
 }

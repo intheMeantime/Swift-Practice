@@ -19,6 +19,10 @@ struct FriendDetail: View {
     // 취소하는 경우 변경내역에서 돌아오기 위한 것..
     @Environment(\.modelContext) private var context
     
+    // 영화 목록 가져오기
+    @Query(sort: \Movie.title) private var movies: [Movie]
+    
+    
     // 커스텀 초기화
     init(friend: Friend, isNew: Bool = false) {
            self.friend = friend
@@ -30,6 +34,21 @@ struct FriendDetail: View {
         Form { // form 컨테이너 (걍 레이아웃인듯)
             TextField("Name", text: $friend.name)
                 .autocorrectionDisabled()
+            
+            // $friend의 favoritMovie 값을 .tag() 값으로 바꿀(할당할) 것임.
+            Picker("조아하는 영화", selection: $friend.favoriteMovie){
+                // 피커의 선택지일 뿐
+                
+                // 이 항목의 tag가 nil이기 때문에, 사용자가 이 항목을 선택하면 SwiftUI는 friend.favoriteMovie를 nil로 설정함.
+                Text("None")
+                    .tag(nil as Movie?)
+                
+                ForEach(movies) { movie in
+                    Text(movie.title)
+                        .tag(movie)
+                }
+            }
+            
             Image("wosagi")
                 .resizable()
                 .frame(width: 200, height: 200)
@@ -61,10 +80,13 @@ struct FriendDetail: View {
     NavigationStack {
         FriendDetail(friend: SampleData.shared.friend)
     }
+    // Query를 생성하기 전에, 모델 컨텍스트에 접근할 수 있도록 preview에 샘플 데이터 모델 컨테이너를 추가.
+    .modelContainer(SampleData.shared.modelContainer)
 }
 
 #Preview("새친구") {
     NavigationStack {
         FriendDetail(friend: SampleData.shared.friend, isNew: true)
     }
+    .modelContainer(SampleData.shared.modelContainer)
 }

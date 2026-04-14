@@ -6,6 +6,7 @@
     - NavigationSplitView를 사이드바와 디테일 영역으로 구성!
     - 사이드바에는 보통 항목들의 리스트가 포함되며, 각 항목을 선택하면 해당 항목에 대응하는 하위 뷰가 디테일 영역에 표시됨
 
+
 - 데이터 관리하기 위한  `SampleData` 클래스 
     - `modelContainer`와 `Schema`의 등장
     - 스키마와 모델 config를 넘겨줄 모델컨테이너를 만듦
@@ -13,17 +14,18 @@
     modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
     ```
 
+---
 
 ## [Data Modeling] 3-2. Navigation, editing, and relationships: Create, update, and delete data
 
 <https://developer.apple.com/tutorials/develop-in-swift/create-update-and-delete-data>
 
 
-- 각 행을 스와이프하여 삭제하는 기능
+- **각 행을 스와이프하여 삭제**하는 기능
     `.onDelete(perform: deleteMovie(indexes:))`
                 
 
-- 툴바 만들기
+- **툴바** 만들기
     - 정보를 추가(`action: addFriend`)할 수도 있고, 삭제(`EditButton()`)할 수도 있음 .. 
                 
     ```Swift
@@ -60,7 +62,7 @@
 
 <https://developer.apple.com/tutorials/develop-in-swift/work-with-relationships>
 
-- 검색창 만들기
+- **검색창** 만들기
     ```Swift
         MovieList(titleFilter: searchText)
             .searchable(text: $searchText)
@@ -70,6 +72,7 @@
     - Query 설정을 직접 바꾸는 것
     - `predicate` 조건으로 필터링 / title 기준 정렬 / 자동으로 movies에 반영됨
         - `_movies = Query(filter: predicate, sort: \Movie.title)`
+
 
     ```Swift
         // 이제 MovieList를 다른곳에서 부를 때, titleFilter를 파라미터로 받게됨.
@@ -90,10 +93,11 @@
             _movies = Query(filter: predicate, sort: \Movie.title)
         }
     ```
-- SwiftData 에서 property 추가하기 
+- SwiftData 에서 **property 추가**하기 
     - SwiftData에서는 `@Model` 클래스에 프로퍼티를 추가하면 자동으로 데이터 필드나 relationship가 생성됨,,
     - 예를 들어 Movie 타입(`favoriteMovie`)을 추가하면 Friend와 Movie 사이의 관계가 자동으로 관리됨
-    ```
+    
+    ```Swift
     @Model
     class Friend {
         var name: String

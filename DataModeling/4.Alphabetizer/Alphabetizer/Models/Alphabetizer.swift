@@ -47,13 +47,8 @@ class Alphabetizer {
             $0.word.lexicographicallyPrecedes($1.word)
         }
         
-        // 위 두 배열을 비교하기 위해서는 Tile은 Equatable 설정을 해줘야 함!! ( extension Tile: Equatable {...} )
-        
+        // 위 두 배열을 비교하기 위해서는 Tile에다가 Equatable 설정을 해줘야 함!! ( extension Tile: Equatable {...} )
         let isAlphbetized = userSortedTiles == alphabeticallySortedTiles
-        
-        
-        
-        
 
         
         // 만약 알파벳순이면, 점수 증가
@@ -74,12 +69,10 @@ class Alphabetizer {
             tile.flipped = tileIsAlphabetized
         }
         
-        
-        
-        
+
         // SwiftUI 뷰 밖에서는, Task를 사용해 비동기 코드를 실행 ........
         Task { @MainActor in // Task가 메인 액터를 사용하도록 조정
-            // 2초 기달
+            // 5초 기달
             try await Task.sleep(for: .seconds(5))
             
             // 전부 알파벳으로 되었으면, 새로운 타일들 생성

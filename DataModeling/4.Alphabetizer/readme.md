@@ -7,21 +7,24 @@
     - 데이터의 구조나 상태(enum) 같은 건 따로 파일을 만들고 `Alphabetizer.swift`에서 불러옴
     - 그리고 구조같은 걸 사용해서 데이터를 만들거나, 상태를 바꾸는 듯함.
 
-- @Observable // 매크로: 클래스에 새로운 기능을 추가
-    - @Observable을 사용하면 데이터의 진짜 출처(source of truth)가 뷰가 아니라! ""Tile 모델""로 이동하게 됨!!!!!!!! -- 데이터 저장 가능!
+- `@Observable` // 매크로: 클래스에 새로운 기능을 추가
+    - `@Observable`을 사용하면 데이터의 진짜 출처(source of truth)가 뷰가 아니라! ""Tile 모델""로 이동하게 됨!!!!!!!!
+    - → 데이터 저장 가능!
 
 
-- WordCanvas.swift에 제스처 인식 기능 구현코드 있음
+- `WordCanvas.swift`에 제스처 인식 기능 구현코드 있음
 
 - 캔버스 새로고침 Editor > Canvas > Refresh Canvas 
 
-- enum에 String 원시값(raw value)을 부여하면, 각 enum 케이스에 문자열 값을 연결할 수 있음! (... .instruction.rawValue)
+- `enum`에 String 원시값(raw value)을 부여하면, 각 enum 케이스에 문자열 값을 연결할 수 있음! (... `.instruction.rawValue`)
+
+- documentation 주석 `///`
+- 써야하는 코드 위치를 메모해두는 `// TODO:`
+- 이 이하로는 외부 코드에서는 접근하지 않을 프라이빗한 함수라는 것을 표시하는 `// MARK:` (public 영역과 private 영역을 구분함)
 
 
 ## Preview
 ![preview](img/preview.png)
-
-
 
 
 

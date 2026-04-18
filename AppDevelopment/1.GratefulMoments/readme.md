@@ -3,13 +3,13 @@
 <https://developer.apple.com/tutorials/develop-in-swift/collect-model-and-store-data>
 
 
-- 갤러리에서 사진 선택하기
+- 갤러리에서 사진 선택하기 ` PhotosPicker(selection: $newImg) {...} `
     - `PhotosPicker`는 iOS에서 사진 라이브러리 선택 UI를 띄워주는 뷰
     - `selection: $newImg` --> 사용자가 선택한 사진이 newImg에 $바인딩됨
-    ``` PhotosPicker(selection: $newImg) { ```
+    
 
 
-- 툴바에서 데이터 삭제할 때, 경고창 띄우기
+- 툴바에서 데이터 삭제할 때, 경고창 띄우기 `.confirmationDialog`
     ```Swift
     // 입력한 정보를 실수로 삭제하지 않도록 표시!!!
     .confirmationDialog("삭제의 순간 최종 확인", isPresented: $isShowingCancelConfirmation) {

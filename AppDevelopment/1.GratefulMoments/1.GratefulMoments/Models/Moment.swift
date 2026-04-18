@@ -45,26 +45,27 @@ extension Moment { // 모먼트 클래스의 확장판
 
     static let sampleData = [
         Moment(
-            title: "🍅🥳",
+            title: "마토마",
             note: "토마토마토마토"
         ),
         Moment(
             title: "Passed the test!",
-            note: "The chem exam was tough, but I think I did well 🙌 I’m so glad I reached out to Guillermo and Lee for a study session. It really helped!",
+            note: "The chem exam was tough, but I think I did well! I’m so glad I reached out to Guillermo and Lee for a study session. It really helped!",
             imageData: UIImage(named: "Study")?.pngData()
         ),
         Moment(
-            title: "Down time",
-            note: "조용한 곳을 찾아 가만이 앉아서 숨을 쉬어라",
+            title: "Reality is also a pizza",
+            note: "조용한 곳을 찾아 가만히 앉아서 숨을 쉬기",
             imageData: UIImage(named: "Relax")?.pngData()
         ),
         Moment(
-            title: "Family ❤️",
-            note: ""
+            title: "바다다",
+            note: "바다가 좋다 밤바다 낮바다 새벽바다 아침바다 저녁바다",
+            imageData: UIImage(named: "밤바다")?.pngData()
         ),
         Moment(
-            title: "Rock on!",
-            note: "아 콘서트 가고 싶다 더캠쓰리? 🏕️ 🎶",
+            title: "더캠프",
+            note: "아 콘서트 가고 싶다 더캠쓰리 ㄱㄱ? ",
             imageData: UIImage(named: "Concert")?.pngData()
         )
     ]

@@ -31,7 +31,7 @@ struct MomentEntryView: View {
             }
             // 화면 밖으로 스크롤(??) 하면 키보드가 사라지도록 하는 모디파이어
             .scrollDismissesKeyboard(.interactively)
-            .navigationTitle("감사감사감사한..")
+            .navigationTitle("이번엔 어떤 기억을")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
                     Button("취소", systemImage: "xmark") {
@@ -86,11 +86,16 @@ struct MomentEntryView: View {
                         .resizable()
                         .scaledToFit()
                 } else {
-                    Image(systemName: "fish.fill")
-                        .font(.largeTitle)
-                        .frame(height: 250)
-                        .frame(maxWidth: .infinity)
-                        .background(.blueberry)
+                    VStack {
+                        Image(systemName: "arrow.up.heart.fill")
+                            .font(.largeTitle)
+                            .padding(.bottom, 5)
+                        Text("이미지 추가하기")
+                            .font(.footnote)
+                    }
+                    .frame(height: 250)
+                    .frame(maxWidth: .infinity)
+                    .background(.blueberry)
                 }
             }
                 .clipShape(RoundedRectangle(cornerRadius: 16))
@@ -120,14 +125,14 @@ struct MomentEntryView: View {
             
             
             TextField(text: $title) {
-                Text("제목 입력하세요 (Required)")
+                Text("적어볼까 (Required)")
             }
             .font(.title.bold())
             .padding(.top, 48)
             .padding(.leading)
             Divider()
             
-            TextField("성공을 기록하십시오", text: $note, axis: .vertical)
+            TextField("주절주절...주절주절..", text: $note, axis: .vertical)
                 .multilineTextAlignment(.leading)
                 // 최소 다섯 줄의 공간을 확보하고, 최대값을 Int.max로 설정하여 사용자가 원하는 만큼 텍스트를 입력할 수 있도 함.
                 .lineLimit(5...Int.max)

@@ -46,3 +46,60 @@
 ## Preview (1-1)
 
 ![preview](img/preview1.png)
+
+---
+
+## [App Development] 1-2. Views and data storage: Use a custom layout view
+
+
+- `@ViewBuilder` property .........
+    - `Shape.swift 에서 사용함.` 
+    - 여러 개의 View를 하나의 View처럼 묶어서 반환하게 해주는 빌더
+    - 원래는 하나의 함수는 하나의 View를 반환하는 것이 기본임.
+    - 
+    
+
+- 내가 원하는 레이아웃을 만들기 ⭐️커스텀 컨테이너 뷰⭐️를 만듦! `Shape.swift`
+    ```Swift
+    // 어떤 뷰든 받을 수 있도록 제네릭 타입 추가
+    // Content: View → 어떤 SwiftUI View든 받을 수 있음
+
+    //  단순한 고정 뷰가 아니라, {} 안에 원하는 뷰를 넣을 수 있는 ‘컨테이너 뷰’로 바꾸기! 아대박.
+    // VStack 이런 컨테이너 뷰를 만드는 것임!
+    struct Shape<Content: View>: View { ... }
+
+    ```
+    - 위치 조정이 빡세다 ... 이모지마다 사이즈가 달라서 그대로 따라하며 이상하게 나왔음
+    - `enum`에 `case` 뿐 아니라 변수(`var`)도 그냥 담을 수 있음!
+        - `case` 만들어두고 `swich 문`에 넣어서 return 값 줄 수도 있음!
+    
+    
+- ForEach로 여러개의 뷰를 뿌릴 때 **위치 조정** 하기 `.offset(x: ...)`
+    ```Swift
+            ForEach(moments.enumerated(), id: \.0) { idx, moment in
+            ....
+            
+                MomentShapeView(moment: moment)
+                // 위치 지정해주기! sin 이용 ..
+                .offset(x: sin(Double(idx) * .pi / 2) * Self.offsetAmount)
+    ```
+
+- 스크롤할 때 애니메이션 `.scrollTransition`
+    ```Swift
+        // 스크롤하면서 View가 화면에 들어오거나 나갈 때 자동으로 애니메이션 상태(phase)를 바꿔주는 기능
+        // content: 지금 뷰
+        // phase: 지금 뷰의 상태
+        .scrollTransition {content, phase in
+            content
+                // .isIdentity: 정상위치(화면중앙, 원래 상태)에 있는가
+                .opacity(phase.isIdentity ? 1 : 0)
+                .scaleEffect(phase.isIdentity ? 1 : 0.5 )
+        }
+    ```
+
+
+## Preview (1-2)
+
+
+![preview](img/preview2.png)
+![preview](img/preview3.png)

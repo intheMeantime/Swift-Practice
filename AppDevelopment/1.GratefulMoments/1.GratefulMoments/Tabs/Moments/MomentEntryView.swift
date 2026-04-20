@@ -34,6 +34,7 @@ struct MomentEntryView: View {
             .navigationTitle("이번엔 어떤 기억을")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
+                    // 작성중인 기록 삭제하기
                     Button("취소", systemImage: "xmark") {
                         if title.isEmpty, note.isEmpty, imageData == nil {
                             dismiss() // 데이터가 아무것도 없으면 바로 창 닫게함.
@@ -49,6 +50,7 @@ struct MomentEntryView: View {
                     }
                 }
                 ToolbarItem(placement: .confirmationAction) {
+                    // 기록 추가 버튼
                     Button("Add", systemImage: "checkmark") {
                         let newMoment = Moment(
                             title: title ,
@@ -58,6 +60,7 @@ struct MomentEntryView: View {
                         )
                         dataContainer.context.insert(newMoment)
                         do {
+                            try dataContainer.badgeManager.unlockBadge(newMoment: newMoment)
                             try dataContainer.context.save()
                             dismiss()
                         } catch {

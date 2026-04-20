@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 
+
 struct MomentDetailView: View {
     var moment: Moment
     @State private var showConfirmation = false
@@ -45,12 +46,23 @@ struct MomentDetailView: View {
         .background(Gradient(colors: GradientColors))
     }
     
-    
+    // 컨텐츠 스택 뷰
     private var contentStack: some View {
         VStack(alignment: .leading) {
-            Text(moment.timestamp, style: .date)
-                .font(.subheadline)
-            
+            HStack {
+                Text(moment.timestamp, style: .date)
+                    .font(.subheadline)
+                Spacer()
+                ForEach(moment.badges) {badge in
+                    NavigationLink{
+                        BadgeDetailView(badge: badge)
+                    } label: {
+                        Image(badge.details.image)
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                    }
+                }
+            }
             // 비어있을 수도 있으니까 확인해줘야 함
             if !moment.note.isEmpty {
                 Text(moment.note)

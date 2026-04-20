@@ -103,3 +103,43 @@
 
 ![preview](img/preview2.png)
 ![preview](img/preview3.png)
+
+---
+---
+
+## [App Development] 2. User experience features: Create an algorithm for badges
+
+<https://developer.apple.com/tutorials/develop-in-swift/create-an-algorithm-for-badges>
+
+- 연속일수 계산하는 코드 어렵다
+- 뱃지 모델을 만듦
+- 뱃지 매니저를 만듦
+- 뱃지 enum을 만듦
+    ```Swift
+    // BadgeDetails에 Int 타입의 원시 값을 지정 / 나중에 모델을 저장할 수 있도록 Codable / 코드의 다른 부분에서 모든 케이스에 접근할 수 있도록 CaseIterable.
+    enum BadgeDetails: Int, Codable, CaseIterable { ...}
+    
+    ```
+- 뷰 안에 뷰 안에 뷰 ....... 이런식임. 그냥 
+    ```Swift
+        NavigationStack {
+            ScrollView {
+                HStack {
+                        ...}}}
+    ```
+    
+- 네비게이션에 관하여..
+    ```Swift
+    NavigationStack { // 이동할 수 있는 환경 생성
+        NavigationLink { // 이동 실행
+            BadgeDetailView(badge: badge)
+        } label: { 
+            ... }
+    }
+    ```
+
+
+
+## Preview (2)
+
+![preview](img/preview4.png)

@@ -21,6 +21,7 @@ import Observation
 class DataContainer {
     // DB 전체를 관리하는 루트 객체
     let modelContainer: ModelContainer
+    var badgeManager: BadgeManager
     
     // 자주 쓰니까 편하게 꺼내기 위해서 만듦!
     // 도서관 사서 역할
@@ -33,35 +34,54 @@ class DataContainer {
         // 어떤 모델(@Model)을 DB에 넣을지 정의해줌. (여러 개 가능)
         let schema = Schema([
             Moment.self,
+            Badge.self,
         ])
         
         // 설정값들
         // isStoredInMemoryOnly: true --> 앱을 종료하면 데이터 사라짐!=테스트용 (실제 앱이면 false)
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: includeSampleData)
         
-        
         do {
             // !!!!!!!!! SwiftData DB 생성!!!!!!!! -- 위에서 만들어둔 schema랑 config 를 넘겨줌!
             modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            badgeManager = BadgeManager(modelContainer: modelContainer)
             
+            // 뱃지 로드하기
+            // 이 메서드는 앱이 실행될 때마다 호출됨 - 있는지 체크하게 만들어뒀음
+            try badgeManager.loadBadgesIfNeeded()
+            
+            
+            // 초기에 기본으로 목데이터를 넣어주기 (여기서는 샘플 느낌)
             if includeSampleData {
-                loadSampleMoment() // 초기에 기본으로 데이터를 넣어주기 (여기서는 샘플 느낌)
+                try loadSampleMoment()
             }
             
             try context.save()
+            
         } catch {
             fatalError("모델 컨테이너를 만들 수 없음: \(error)")
         }
         
     }
     
-    private func loadSampleMoment() {
+    
+    
+    
+    
+    private func loadSampleMoment() throws {
         for moment in Moment.sampleData {
             context.insert(moment)
+            try badgeManager.unlockBadge(newMoment: moment)
         }
     }
     
+    
+    
 }
+
+
+
+
 
 
 private let sampleContainer = DataContainer(includeSampleData: true)

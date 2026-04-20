@@ -23,7 +23,7 @@ struct Shape<Content: View>: View {
     @ViewBuilder var content: () -> Content
     
     
-    
+    // 걍 하트모양에 이미지 쌓아 만든거임
     var body: some View {
         ZStack{
             if let background = moment?.image {
@@ -39,6 +39,7 @@ struct Shape<Content: View>: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: layout.size, height: layout.size)
+                .fontWeight(.ultraLight)
         }
         .background{
             Image(systemName: "heart.fill")
@@ -46,8 +47,14 @@ struct Shape<Content: View>: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width:layout.size, height:layout.size)
                 .foregroundStyle(.blueberry)
+                .fontWeight(.ultraLight)
         }
         .frame(width: layout.size, height: layout.size)
+        .overlay(alignment: .topTrailing) {
+            if let moment {
+                ShapeAccessoryView(moment: moment, shapeLayout: layout)
+            }
+        }
     }
 }
 

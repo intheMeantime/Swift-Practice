@@ -17,11 +17,14 @@ class Moment {
     var imageData: Data? // 이건머지
     var timestamp: Date
     
+    var badges: [Badge]
+    
     init(title:String, note:String, imageData: Data? = nil, timestamp:Date = .now) {
         self.title = title
         self.note = note
         self.imageData = imageData
         self.timestamp = timestamp
+        self.badges = []
     }
     
     
@@ -31,7 +34,6 @@ class Moment {
             UIImage(data: $0)
         }
     }
-    
     
 }
 

@@ -9,17 +9,24 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        TabView {
+            Tab("기억", image: "MomentsTab") {
+                MomentsView()
+            }
+            
+            Tab("와우", systemImage: "medal") {
+                AchievementsView()
+            }
         }
-        .padding()
     }
 }
 
+
 #Preview {
     ContentView()
+        .sampleDataContainer()
 }

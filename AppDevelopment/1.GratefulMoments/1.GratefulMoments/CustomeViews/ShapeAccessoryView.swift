@@ -31,6 +31,7 @@ struct ShapeAccessoryView: View {
             if badges.count > 1 {
                 Text("+\(badges.count)")
                     .bold()
+                    .minimumScaleFactor(0.3)
                     .frame(width: size * 0.5, height: size * 0.5)
                     .padding(8)
                     .background {
@@ -83,6 +84,13 @@ struct ShapeAccessoryView: View {
 }
 
 #Preview("Multiple badges") {
-    ShapeAccessoryView(moment: .imageSample, shapeLayout: .large)
+    ShapeAccessoryView(moment: .imageSample, shapeLayout: .standard)
+        .dynamicTypeSize(.large)
         .sampleDataContainer()
 }
+
+//#Preview("badges222") {
+//    ShapeAccessoryView(moment: .imageSample, layout: .standard)
+//        .dynamicTypeSize(.large)
+//        .sampleDataContainer()
+//}

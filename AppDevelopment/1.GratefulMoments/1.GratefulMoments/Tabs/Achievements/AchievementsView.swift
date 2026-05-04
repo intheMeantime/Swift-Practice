@@ -22,9 +22,11 @@ struct AchievementsView: View {
             ScrollView {
                 contentStack
             }
-            .navigationTitle(Text("와우"))
+            .navigationTitle(Text("기록기억기"))
             .background(Gradient(colors: GradientColors))
         }
+        // xxxlarge 사이즈까지만 제한
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
     }
     
     

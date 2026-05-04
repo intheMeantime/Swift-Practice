@@ -16,22 +16,34 @@ struct StreakView: View {
             VStack(spacing: 0){
                 Text("Streak \(Image(systemName: "flame.fill"))")
                     .foregroundStyle(.ember)
-                Text("\(numberOfDays)")
-                    .font(.system(size:70))
-                Text("Days")
+                Text(attributedText)
+                    .multilineTextAlignment(.center)
+                
+                
+//                Text("\(numberOfDays)")
+//                    .font(.system(size:70))
+//                Text("Days")
             }
             .font(.callout)
-            
-            
-            
             
         }
     }
     
-    
+    var attributedText: AttributedString {
+        // Localized 문자열은 자동 문법 일치를 사용해 다양한 언어에 맞게 표현
+        var attributedString = AttributedString(localized: "^[\(numberOfDays) \nDays](inflect: true)")
+        
+        // 숫자
+        if let range = attributedString.range(of: "\(numberOfDays)") {
+            attributedString[range].font = .system(size: 70)
+        }
+        return attributedString
+    }
     
 }
 
 #Preview {
+    StreakView(numberOfDays: 0)
+    StreakView(numberOfDays: 1)
     StreakView(numberOfDays: 23)
 }

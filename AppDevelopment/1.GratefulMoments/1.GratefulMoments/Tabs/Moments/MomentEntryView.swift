@@ -128,7 +128,7 @@ struct MomentEntryView: View {
             
             
             TextField(text: $title) {
-                Text("적어볼까 (Required)")
+                Text("적어보시오 (Required)")
             }
             .font(.title.bold())
             .padding(.top, 48)

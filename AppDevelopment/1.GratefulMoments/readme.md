@@ -16,8 +16,7 @@
         Button("기록을 떠나보낼게요", role: .destructive) {
             dismiss() // 버튼 누르면 창 닫음
         }
-    }
-    ```
+    }```
 
 - **SwiftData @Model** 파일 : `Moment.swift`
 
@@ -37,8 +36,7 @@
             
             modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
             
-            ...
-    ```
+            ...```
 
 - `extension` 
     - 데이터 구조만 class 안에 넣어두고, 추가 함수 같은 건 `extension ` 으로 넣을 수 있음
@@ -66,9 +64,9 @@
 
     //  단순한 고정 뷰가 아니라, {} 안에 원하는 뷰를 넣을 수 있는 ‘컨테이너 뷰’로 바꾸기! 아대박.
     // VStack 이런 컨테이너 뷰를 만드는 것임!
-    struct Shape<Content: View>: View { ... }
-
-    ```
+    
+    struct Shape<Content: View>: View { ... }```
+    
     - 위치 조정이 빡세다 ... 이모지마다 사이즈가 달라서 그대로 따라하며 이상하게 나왔음
     - `enum`에 `case` 뿐 아니라 변수(`var`)도 그냥 담을 수 있음!
         - `case` 만들어두고 `swich 문`에 넣어서 return 값 줄 수도 있음!
@@ -81,8 +79,7 @@
             
                 MomentShapeView(moment: moment)
                 // 위치 지정해주기! sin 이용 ..
-                .offset(x: sin(Double(idx) * .pi / 2) * Self.offsetAmount)
-    ```
+                .offset(x: sin(Double(idx) * .pi / 2) * Self.offsetAmount)```
 
 - 스크롤할 때 애니메이션 `.scrollTransition`
     ```Swift
@@ -94,8 +91,7 @@
                 // .isIdentity: 정상위치(화면중앙, 원래 상태)에 있는가
                 .opacity(phase.isIdentity ? 1 : 0)
                 .scaleEffect(phase.isIdentity ? 1 : 0.5 )
-        }
-    ```
+        }```
 
 
 ## Preview (1-2)
@@ -117,16 +113,14 @@
 - 뱃지 enum을 만듦
     ```Swift
     // BadgeDetails에 Int 타입의 원시 값을 지정 / 나중에 모델을 저장할 수 있도록 Codable / 코드의 다른 부분에서 모든 케이스에 접근할 수 있도록 CaseIterable.
-    enum BadgeDetails: Int, Codable, CaseIterable { ...}
+    enum BadgeDetails: Int, Codable, CaseIterable { ...}```
     
-    ```
 - 뷰 안에 뷰 안에 뷰 ....... 이런식임. 그냥 
     ```Swift
         NavigationStack {
             ScrollView {
                 HStack {
-                        ...}}}
-    ```
+                        ...}}}```
     
 - 네비게이션에 관하여..
     ```Swift
@@ -135,11 +129,25 @@
             BadgeDetailView(badge: badge)
         } label: { 
             ... }
-    }
-    ```
+    }```
 
 
 
 ## Preview (2)
 
 ![preview](img/preview4.png)
+
+---
+---
+
+## [App Development] 3-1. App refinement: Add inclusive features
+
+- 다크 모드
+- 다양한 글꼴 사이즈에도 적응하도록
+- Localize text (e.g, 0days / 1day.... 날짜 표기 방식 등)
+
+## [App Development] 3-2. App refinement: Investigate and fix a bug
+
+- unit testing bundle에서 버그 테스트하기
+- print문 적어둔 것도 테스팅 번들에서 테스트하면서 확인할 수 있음
+- 완성되었으면 print 문은 주석처리하기 (불필요)

@@ -62,6 +62,7 @@ struct MomentsView: View {
             .navigationTitle("기억기록기")
             .background(Gradient(colors: GradientColors))
         }
+        .dynamicTypeSize(...DynamicTypeSize.xLarge)
     }
     
     

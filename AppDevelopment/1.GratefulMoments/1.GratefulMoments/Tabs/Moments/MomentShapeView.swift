@@ -11,6 +11,9 @@ import SwiftUI
 struct MomentShapeView: View {
     var moment: Moment
     @State var layout: ShapeLayout = .standard // enum
+    // 타임스탬프를 위한 위치 정보
+    // 언어와 지역 정보를 모두 포함. 같은 언어라도 지역에 따라 서로 다른 규칙을 따를 수 있기 때문
+    @Environment(\.locale) private var locale
     
     
     var body: some View {
@@ -37,7 +40,7 @@ struct MomentShapeView: View {
             }
             
             Text(moment.timestamp.formatted(
-                .dateTime
+                .dateTime.locale(locale) // 날짜를 원하는 언어로 현지화
                     .month(.abbreviated).day()
             ))
             

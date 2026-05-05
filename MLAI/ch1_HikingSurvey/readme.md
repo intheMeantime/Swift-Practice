@@ -60,4 +60,6 @@ class Scorer {
 ## Preview
 
 ![preview](img/preview1.png)
+한글 학습 안 된 모델 ㅜ.ㅜ  
 ![preview](img/preview2.png)
+문장이 짧으면 분석이 안 됨 ㅜ.ㅜ 

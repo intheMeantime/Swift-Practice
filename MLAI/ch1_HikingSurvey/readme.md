@@ -7,7 +7,8 @@
     ```Swift
         struct Response: Identifiable {
             var id = UUID()
-            ...```
+            ...
+    ```
     
     
 - sentiment 분석 코드 (`Scorer.swift`)
@@ -48,7 +49,8 @@ class Scorer {
         return sentimentScore // score 함수의 최종 return
     }
     
-}```
+}
+```
 
 - 차트 만들기: `import Charts`
 

@@ -1,0 +1,373 @@
+{
+  "activityEntities" : [
+    "trainingFinished",
+    [
+      {
+        "createdDate" : "2026-05-10T12:46:39Z",
+        "event" : "trainingFinished",
+        "id" : "CF654D31-5C0A-4B39-873D-84AE88FC9F08",
+        "subtitle" : "targetIsDangerous",
+        "title" : "Training Completed"
+      }
+    ],
+    "evaluationStarted",
+    [
+      {
+        "createdDate" : "2026-05-10T12:46:41Z",
+        "event" : "evaluationStarted",
+        "id" : "3F0442E2-965E-4798-BAA1-4E1C6B48754D",
+        "subtitle" : "targetIsDangerous",
+        "title" : "Testing Started"
+      }
+    ],
+    "trainingDataAdded",
+    [
+      {
+        "createdDate" : "2026-05-10T12:45:59Z",
+        "event" : "trainingDataAdded",
+        "id" : "A112A051-5AAE-49DA-91FF-CA534A0F87B2",
+        "subtitle" : "Trail10k.csv",
+        "title" : "Training Data Added"
+      }
+    ],
+    "evaluationFinished",
+    [
+      {
+        "createdDate" : "2026-05-10T12:46:42Z",
+        "event" : "evaluationFinished",
+        "id" : "EEA83C79-67BF-4D13-8483-8B92F461141E",
+        "subtitle" : "targetIsDangerous",
+        "title" : "Testing Completed"
+      }
+    ],
+    "trainingStarted",
+    [
+      {
+        "createdDate" : "2026-05-10T12:46:39Z",
+        "event" : "trainingStarted",
+        "id" : "C94BB242-B424-4B83-A9F1-4B45DDEFFFCB",
+        "subtitle" : "targetIsDangerous",
+        "title" : "Training Started"
+      }
+    ],
+    "evaluationDataAdded",
+    [
+      {
+        "createdDate" : "2026-05-10T12:45:59Z",
+        "event" : "evaluationDataAdded",
+        "id" : "9A4A1234-6234-4EB5-93D3-8AD2DA057C46",
+        "subtitle" : "Trail1k.csv",
+        "title" : "Testing Data Added"
+      }
+    ],
+    "experimentCreated",
+    [
+      {
+        "createdDate" : "2026-05-10T12:45:58Z",
+        "event" : "experimentCreated",
+        "id" : "B6EAA9B2-3ADC-41BD-814B-15EEC9B4E8F6",
+        "subtitle" : "targetIsDangerous",
+        "title" : "Model Source Created"
+      }
+    ]
+  ],
+  "contentDataResult" : {
+    "createdDate" : "2026-05-10T12:37:23Z"
+  },
+  "createdDate" : "2026-05-10T12:45:58Z",
+  "evaluationContainerEntity" : {
+    "createdDate" : "2026-05-10T12:46:42Z",
+    "evaluationEntities" : [
+
+    ],
+    "id" : "267f6366-541e-4ca9-b03f-74f948f4ba9e",
+    "modifiedDate" : "2026-05-10T12:46:42Z",
+    "previewType" : "tabularRegressor",
+    "testingEvaluationEntity" : {
+      "accuracy" : 0.00473901273149908,
+      "analysedDataType" : "datasource",
+      "createdDate" : "2026-05-10T12:45:58Z",
+      "dataResult" : {
+        "columnTypes" : [
+          "Int",
+          "Int",
+          "String",
+          "Int",
+          "Int"
+        ],
+        "columnValues" : [
+          "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3",
+          "0, 0, 0, 0, 0, 0, 0, 300, 300, 300, 300, 0, 0, 0, 0, 0, 0, 0, 0, 300, 300, 0, 0, 0, 0, 0, 0, 0, 0, 300",
+          "paved, sandy, sandy, sandy, sandy, sandy, sandy, paved, paved, paved, sandy, paved, paved, paved, paved, sandy, sandy, sandy, sandy, paved, paved, paved, paved, paved, paved, sandy, sandy, sandy, sandy, paved",
+          "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0",
+          "1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4"
+        ],
+        "columns" : [
+          "distance",
+          "elevation",
+          "terrain",
+          "dangerous",
+          "risk"
+        ],
+        "createdDate" : "2026-05-10T12:45:58Z",
+        "dataAnalysis" : {
+          "classifierAnalysis" : {
+
+          },
+          "issues" : [
+            {
+              "description" : "Data has 1000 rows",
+              "severity" : "info"
+            }
+          ],
+          "objectDetectorAnalysis" : {
+            "details" : {
+
+            }
+          },
+          "summary" : {
+            "canUseValidation" : 1,
+            "maximum" : 1,
+            "minimum" : 0,
+            "sampleCount" : 1000
+          }
+        },
+        "dataSourceID" : "2EF7A879-848F-41D4-B29A-C9031E7C8168",
+        "dataURL" : "file:///Users/nooy/Documents/ADA/Swift_dayN/MLAI/ch3_TrailAnalyzer/TrailData/Trail1k.csv",
+        "itemsCount" : 1000
+      },
+      "dataSourceID" : "2EF7A879-848F-41D4-B29A-C9031E7C8168",
+      "evaluationResult" : {
+        "generalRegressor" : {
+          "maximumError" : 0.006975741050824713,
+          "rootMeanSquaredError" : 0.00473901273149908
+        }
+      },
+      "finishTime" : "2026-05-10T12:46:42Z",
+      "id" : "9b825c79-74ef-459c-988e-c650805f983e",
+      "startTime" : "2026-05-10T12:46:41Z"
+    },
+    "trainingEvaluationEntity" : {
+      "analysedDataType" : "none",
+      "createdDate" : "2026-05-10T12:45:58Z",
+      "dataResult" : {
+        "createdDate" : "2026-05-10T12:45:58Z",
+        "dataAnalysis" : {
+          "classifierAnalysis" : {
+
+          },
+          "issues" : [
+            {
+              "description" : "Data has 10000 rows",
+              "severity" : "info"
+            }
+          ],
+          "objectDetectorAnalysis" : {
+            "details" : {
+
+            }
+          },
+          "summary" : {
+            "canUseValidation" : 1,
+            "maximum" : 1,
+            "minimum" : 0,
+            "sampleCount" : 10000
+          }
+        },
+        "dataSourceID" : "E4E1F763-9A28-4FF2-A41D-9DC472EBBF9B",
+        "dataURL" : "file:///Users/nooy/Documents/ADA/Swift_dayN/MLAI/ch3_TrailAnalyzer/TrailData/Trail10k.csv",
+        "itemsCount" : 10000
+      },
+      "dataSourceID" : "E4E1F763-9A28-4FF2-A41D-9DC472EBBF9B",
+      "evaluationResult" : {
+        "generalRegressor" : {
+          "maximumError" : 0.006975741050824713,
+          "rootMeanSquaredError" : 0.0047267608510946245
+        }
+      },
+      "id" : "9617370c-bf8b-4e8b-b1f5-d1451d3d5a21"
+    },
+    "validationEvaluationEntity" : {
+      "analysedDataType" : "auto",
+      "createdDate" : "2026-05-10T12:45:58Z",
+      "dataResult" : {
+        "createdDate" : "2026-05-10T12:45:58Z"
+      },
+      "evaluationResult" : {
+        "generalRegressor" : {
+          "maximumError" : 0.006975741050824713,
+          "rootMeanSquaredError" : 0.004802212298101979
+        }
+      },
+      "id" : "a2fdec4f-b862-45be-b178-46e03fa12028"
+    }
+  },
+  "evaluationEntity" : {
+    "analysedDataType" : "none",
+    "dataResult" : {
+
+    },
+    "id" : "c75b44a4-586e-454a-9ccd-aaabca50e493"
+  },
+  "evaluationState" : "evaluated",
+  "id" : "9BDEE21F-1A26-4858-8876-A9F67427519C",
+  "modelEntity" : {
+    "createdDate" : "2026-05-10T12:45:58Z",
+    "experimentID" : "E15CAC8E-5C4C-45E2-AA00-4EFD6F5AFB6E",
+    "id" : "152CE18F-7CBC-49DB-8155-AD8A887D2B8D",
+    "modelURL" : "Models/targetIsDangerous.mlmodel",
+    "modifiedDate" : "2026-05-10T12:45:58Z",
+    "title" : "",
+    "version" : "1.0"
+  },
+  "modifiedDate" : "2026-05-10T12:46:42Z",
+  "preferredFilename" : "targetIsDangerous",
+  "settingEntity" : {
+    "algorithmType" : "maxEnt",
+    "augmentations" : [
+
+    ],
+    "featureNames" : [
+      "distance",
+      "elevation",
+      "terrain",
+      "risk"
+    ],
+    "generalRegressorType" : {
+      "auto" : {
+
+      }
+    },
+    "handActionClassifierAugmentations" : [
+
+    ],
+    "handPoseClassifierAugmentations" : [
+
+    ],
+    "harVideoAugmentations" : 0,
+    "seedType" : "default",
+    "styleTransferAlgorithmType" : "image",
+    "suggestedColumnTypes" : [
+      "Int",
+      "Int",
+      "String",
+      "Int",
+      "Int"
+    ],
+    "suggestedColumnValues" : [
+      "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1",
+      "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0",
+      "paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved",
+      "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0",
+      "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1"
+    ],
+    "suggestedColumns" : [
+      "distance",
+      "elevation",
+      "terrain",
+      "dangerous",
+      "risk"
+    ],
+    "targetColumn" : "dangerous",
+    "taskType" : "generalRegresor",
+    "transferLearningEmbeddingType" : "dynamic"
+  },
+  "snapshotRole" : {
+    "withoutSnapshots" : 0
+  },
+  "state" : "trained",
+  "title" : "less features copy",
+  "trainingEntity" : {
+    "analysedDataType" : "datasource",
+    "checkpointMetrics" : {
+
+    },
+    "dataResult" : {
+      "columnTypes" : [
+        "Int",
+        "Int",
+        "String",
+        "Int",
+        "Int"
+      ],
+      "columnValues" : [
+        "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1",
+        "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0",
+        "paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved, paved",
+        "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0",
+        "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1"
+      ],
+      "columns" : [
+        "distance",
+        "elevation",
+        "terrain",
+        "dangerous",
+        "risk"
+      ],
+      "createdDate" : "2026-05-10T12:45:58Z",
+      "dataAnalysis" : {
+        "classifierAnalysis" : {
+
+        },
+        "issues" : [
+          {
+            "description" : "Data has 10000 rows",
+            "severity" : "info"
+          }
+        ],
+        "objectDetectorAnalysis" : {
+          "details" : {
+
+          }
+        },
+        "summary" : {
+          "canUseValidation" : 1,
+          "maximum" : 1,
+          "minimum" : 0,
+          "sampleCount" : 10000
+        }
+      },
+      "dataSourceID" : "E4E1F763-9A28-4FF2-A41D-9DC472EBBF9B",
+      "dataURL" : "file:///Users/nooy/Documents/ADA/Swift_dayN/MLAI/ch3_TrailAnalyzer/TrailData/Trail10k.csv",
+      "itemsCount" : 10000
+    },
+    "dataSourceID" : "E4E1F763-9A28-4FF2-A41D-9DC472EBBF9B",
+    "featureExtractionCheckpointMayBeAvailable" : false,
+    "finishTime" : "2026-05-10T12:46:39Z",
+    "progress" : [
+
+    ],
+    "snapshottableCheckpoints" : {
+
+    },
+    "startTime" : "2026-05-10T12:46:39Z",
+    "trainingAccuracy" : 0.0047267608510946245,
+    "trainingResults" : {
+      "generalRegressor" : {
+        "maximumError" : 0.006975741050824713,
+        "rootMeanSquaredError" : 0.0047267608510946245
+      }
+    },
+    "validationAccuracy" : 0.004802212298101979,
+    "validationResults" : {
+      "generalRegressor" : {
+        "maximumError" : 0.006975741050824713,
+        "rootMeanSquaredError" : 0.004802212298101979
+      }
+    }
+  },
+  "validationEntity" : {
+    "analysedDataType" : "auto",
+    "dataResult" : {
+      "createdDate" : "2026-05-10T12:45:58Z"
+    },
+    "splitOptions" : {
+      "strategy" : {
+        "automatic" : {
+
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

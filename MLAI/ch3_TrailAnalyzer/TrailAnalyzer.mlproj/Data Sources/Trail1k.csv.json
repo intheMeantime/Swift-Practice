@@ -1,0 +1,81 @@
+{
+  "activityEntities" : [
+
+  ],
+  "createdDate" : "2026-05-10T12:38:08Z",
+  "dataPathRelativeToProjectURL" : "../TrailData/Trail1k.csv/",
+  "dataResult" : {
+    "columnTypes" : [
+      "Int",
+      "Int",
+      "String",
+      "Int",
+      "Int"
+    ],
+    "columnValues" : [
+      "1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3",
+      "0, 0, 0, 0, 0, 0, 0, 300, 300, 300, 300, 0, 0, 0, 0, 0, 0, 0, 0, 300, 300, 0, 0, 0, 0, 0, 0, 0, 0, 300",
+      "paved, sandy, sandy, sandy, sandy, sandy, sandy, paved, paved, paved, sandy, paved, paved, paved, paved, sandy, sandy, sandy, sandy, paved, paved, paved, paved, paved, paved, sandy, sandy, sandy, sandy, paved",
+      "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0",
+      "1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4"
+    ],
+    "columns" : [
+      "distance",
+      "elevation",
+      "terrain",
+      "dangerous",
+      "risk"
+    ],
+    "createdDate" : "2026-05-10T12:38:08Z",
+    "dataAnalysis" : {
+      "classifierAnalysis" : {
+
+      },
+      "issues" : [
+        {
+          "description" : "No target selected",
+          "severity" : "notReady"
+        },
+        {
+          "description" : "Data has 1000 rows",
+          "severity" : "info"
+        },
+        {
+          "description" : "No features selected",
+          "severity" : "notReady"
+        }
+      ],
+      "objectDetectorAnalysis" : {
+        "details" : {
+
+        }
+      },
+      "summary" : {
+        "canUseValidation" : 1,
+        "sampleCount" : 1000
+      }
+    },
+    "dataSourceID" : "2EF7A879-848F-41D4-B29A-C9031E7C8168",
+    "dataURL" : "file:///Users/nooy/Documents/ADA/Swift_dayN/MLAI/ch3_TrailAnalyzer/TrailData/Trail1k.csv",
+    "error" : {
+      "code" : 1000,
+      "domain" : "composer.error.domain",
+      "errorType" : "notReady",
+      "reason" : "No target selected"
+    },
+    "itemsCount" : 1000
+  },
+  "dataURL" : "file:///Users/nooy/Documents/ADA/Swift_dayN/MLAI/ch3_TrailAnalyzer/TrailData/Trail1k.csv",
+  "experimentIDs" : [
+    "A286D063-AC31-402B-BD0E-1961D1E14F23",
+    "1AADDB4F-5159-4A44-8732-A3A83E22FFA9",
+    "D528F548-B87A-4CAA-8302-20762A612262",
+    "9BDEE21F-1A26-4858-8876-A9F67427519C"
+  ],
+  "id" : "2EF7A879-848F-41D4-B29A-C9031E7C8168",
+  "modifiedDate" : "2026-05-10T12:45:59Z",
+  "pathType" : 0,
+  "preferredFilename" : "Trail1k.csv",
+  "title" : "Trail1k.csv",
+  "version" : "1.0"
+}

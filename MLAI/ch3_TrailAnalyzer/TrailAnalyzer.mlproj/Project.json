@@ -1,0 +1,29 @@
+{
+  "activityEntities" : [
+    "projectCreated",
+    [
+      {
+        "createdDate" : "2026-05-10T12:36:43Z",
+        "event" : "projectCreated",
+        "id" : "6DAC3244-EE0E-4643-8B69-6567F0C0C870",
+        "subtitle" : "TrailAnalyzer",
+        "title" : "Project Created"
+      }
+    ]
+  ],
+  "authorName" : "nooy",
+  "createdDate" : "2026-05-10T12:36:43Z",
+  "description" : "",
+  "id" : "CA23AE41-38C7-47C7-A934-E3203933580F",
+  "license" : "",
+  "location" : "",
+  "modifiedDate" : "2026-05-10T12:36:43Z",
+  "projectName" : "TrailAnalyzer",
+  "settingsEntity" : {
+    "snapshotOnExtendTraining" : true,
+    "snapshotOnResumeTraining" : false
+  },
+  "taskType" : "generalRegresor",
+  "title" : "Tabular Regression",
+  "version" : "1.1"
+}
